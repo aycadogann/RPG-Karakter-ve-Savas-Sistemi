@@ -13,7 +13,7 @@ public class Karakter
         SaldiriGucu = saldiriGucu;
     }
 
-    public void BilgiGoster()
+    public virtual void BilgiGoster()
     {
         Console.WriteLine($"Adı: {Isim}\nSağlık Puanı: {Can}\nSaldırı Gücü: {SaldiriGucu}");
     }
@@ -40,7 +40,10 @@ public class Karakter
         if (Can > 0)
             return true;
         else
+        {
+            Console.WriteLine($"{Isim} Öldü!!");
             return false;
+        }
     }
 
     public void Saldir(Karakter hedef)
